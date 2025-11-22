@@ -168,7 +168,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            Hi, I'm{' '}
+            
             <span className="gradient-text">Sai Dinesh Bellamkonda</span>
           </motion.h1>
 

@@ -86,22 +86,62 @@ const About: React.FC = () => {
               Dynamic Full-Stack Developer Creating Exceptional Web Solutions
             </h3>
             <p>
-              I'm Sai Dinesh Bellamkonda, a goal-oriented Full Stack Developer with 6+ years
-              of experience crafting exceptional web solutions. I specialize in delivering
-              high-quality applications and optimizing user experiences.
-
-              My expertise spans across modern technologies including HTML5, CSS3, Tailwind CSS,
-              JavaScript, TypeScript, React, Redux, Python, Django, and MySQL. I thrive in
-              dynamic environments, utilizing AWS for deployments and Agile methodologies for
-              efficient project management.
-
-              Currently working at OpenSolar, I'm contributing to the world's first free AI-powered
-              solar operating system, developing advanced geomapping features, user verification flows,
-              and registration systems that empower solar professionals across 160 countries. I'm
-              passionate about creating impactful solutions that make a difference.
+              I'm <strong style={{ color: '#667eea' }}>Sai Dinesh Bellamkonda</strong>, a goal-oriented Full Stack Developer with{' '}
+              <strong style={{ color: '#667eea' }}>6+ years of experience</strong> crafting exceptional web solutions.
+              I specialize in delivering high-quality applications and optimizing user experiences.
             </p>
 
-            
+            <div className="about-highlights">
+              <motion.div
+                className="highlight-item"
+                initial={{ opacity: 0, x: -30 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <div className="highlight-icon">💻</div>
+                <div>
+                  <h4>Technical Expertise</h4>
+                  <p>
+                    Modern technologies including HTML5, CSS3, Tailwind CSS, JavaScript, TypeScript,
+                    React, Redux, Python, Django, and MySQL
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="highlight-item"
+                initial={{ opacity: 0, x: -30 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <div className="highlight-icon">☁️</div>
+                <div>
+                  <h4>Cloud & Methodologies</h4>
+                  <p>
+                    Thriving in dynamic environments, utilizing AWS for deployments and
+                    Agile methodologies for efficient project management
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="highlight-item"
+                initial={{ opacity: 0, x: -30 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: 0.6 }}
+              >
+                <div className="highlight-icon">🌞</div>
+                <div>
+                  <h4>Current Impact at OpenSolar</h4>
+                  <p>
+                    Contributing to the world's first free AI-powered solar operating system,
+                    developing advanced geomapping features, user verification flows, and
+                    registration systems that empower solar professionals across{' '}
+                    <strong style={{ color: '#667eea' }}>160 countries</strong>
+                  </p>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
 
           
