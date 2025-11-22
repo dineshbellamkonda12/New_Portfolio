@@ -48,13 +48,6 @@ const About: React.FC = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
 
-  const stats = [
-    { number: '6+', label: 'Years Experience' },
-    { number: '15+', label: 'Projects Completed' },
-    { number: '100%', label: 'Client Satisfaction' },
-    { number: '15+', label: 'Technologies' },
-  ];
-
   return (
     <section id="about" className="about" ref={sectionRef}>
       <motion.div className="about-3d-background" style={{ y }}>
