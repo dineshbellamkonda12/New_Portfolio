@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import ThemeToggle from './ThemeToggle';
 import './Navigation.css';
 
 interface NavigationProps {
@@ -53,33 +54,37 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
           <span className="logo-text">SDB</span>
         </motion.div>
 
-        <button
-          className={`menu-toggle ${menuOpen ? 'open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
-          {navItems.map((item, index) => (
-            <motion.li
-              key={item.id}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
-              <button
-                className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
-                onClick={() => scrollToSection(item.id)}
+        <div className="nav-right">
+          <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
+            {navItems.map((item, index) => (
+              <motion.li
+                key={item.id}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
               >
-                {item.label}
-              </button>
-            </motion.li>
-          ))}
-        </ul>
+                <button
+                  className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
+                  onClick={() => scrollToSection(item.id)}
+                >
+                  {item.label}
+                </button>
+              </motion.li>
+            ))}
+          </ul>
+
+          <ThemeToggle />
+
+          <button
+            className={`menu-toggle ${menuOpen ? 'open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </motion.nav>
   );

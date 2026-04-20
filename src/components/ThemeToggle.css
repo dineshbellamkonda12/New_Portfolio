@@ -1,0 +1,39 @@
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  color: var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1001;
+}
+
+.theme-toggle:hover {
+  background: var(--highlight-bg);
+  border-color: var(--card-hover-border);
+  box-shadow: 0 4px 12px var(--card-hover-shadow);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -37,17 +38,19 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <ParticlesBackground />
-      <Navigation activeSection={activeSection} />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Education />
-      <Contact />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <ParticlesBackground />
+        <Navigation activeSection={activeSection} />
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+      </div>
+    </ThemeProvider>
   );
 }
 

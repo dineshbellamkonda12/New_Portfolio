@@ -2,8 +2,8 @@
   min-height: 100vh;
   padding: 6rem 2rem 2rem;
   position: relative;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 1) 0%, rgba(28, 20, 48, 0.9) 50%, rgba(15, 23, 42, 1) 100%);
-  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  background: var(--bg-section-3);
+  border-top: 1px solid var(--section-border);
 }
 
 .contact::after {
@@ -14,7 +14,7 @@
   transform: translateX(-50%);
   width: 80%;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(102, 126, 234, 0.5) 50%, transparent 100%);
+  background: var(--section-divider);
   z-index: 2;
 }
 
@@ -39,7 +39,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .contact-cards {
@@ -53,16 +53,18 @@
   display: flex;
   gap: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 15px;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px var(--card-shadow);
 }
 
 .contact-card:hover {
-  border-color: #667eea;
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+  border-color: var(--card-hover-border);
+  box-shadow: 0 10px 30px var(--card-hover-shadow);
+  transform: translateY(-2px);
 }
 
 .contact-card-icon {
@@ -73,21 +75,21 @@
 .contact-card-content h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #667eea;
+  color: var(--institution-color);
   margin: 0 0 0.5rem 0;
 }
 
 .contact-value {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--text-primary);
   margin: 0 0 0.25rem 0;
 }
 
 .contact-link {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--text-primary);
   text-decoration: none;
   display: block;
   margin: 0 0 0.25rem 0;
@@ -95,12 +97,12 @@
 }
 
 .contact-link:hover {
-  color: #667eea;
+  color: var(--accent-pink);
 }
 
 .contact-subtitle {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin: 0;
 }
 
@@ -111,7 +113,7 @@
 .social-title {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 1rem;
 }
 
@@ -126,26 +128,30 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background: rgba(102, 126, 234, 0.1);
-  border: 1px solid rgba(102, 126, 234, 0.3);
+  background: var(--social-bg);
+  border: 1px solid var(--social-border);
   border-radius: 50px;
-  color: #fff;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.3s ease;
   font-weight: 500;
 }
 
 .social-button:hover {
-  background: rgba(102, 126, 234, 0.2);
-  border-color: #667eea;
+  background: var(--social-hover-bg);
+  border-color: var(--social-hover-border);
+  color: var(--accent-purple);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--card-hover-shadow);
 }
 
 .contact-form-wrapper {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 20px;
   padding: 2.5rem;
   backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px var(--card-shadow);
 }
 
 .contact-form {
@@ -163,16 +169,16 @@
 .form-group label {
   font-size: 1rem;
   font-weight: 500;
-  color: #cbd5e1;
+  color: var(--text-secondary);
 }
 
 .form-group input,
 .form-group textarea {
   padding: 1rem;
-  background: rgba(10, 14, 39, 0.6);
-  border: 1px solid rgba(102, 126, 234, 0.3);
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
   border-radius: 10px;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1rem;
   font-family: inherit;
   transition: all 0.3s ease;
@@ -181,8 +187,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--input-focus-shadow);
 }
 
 .form-group textarea {
@@ -196,7 +202,7 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-main);
   border: none;
   border-radius: 50px;
   color: white;
@@ -205,44 +211,33 @@
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  box-shadow: 0 4px 20px var(--card-hover-shadow);
+}
+
+.submit-button:hover {
+  box-shadow: 0 8px 30px var(--card-hover-shadow);
+  transform: translateY(-2px);
 }
 
 .footer {
   text-align: center;
   padding: 3rem 0 2rem;
-  border-top: 1px solid rgba(102, 126, 234, 0.2);
+  border-top: 1px solid var(--footer-border);
 }
 
 .footer p {
-  color: #94a3b8;
+  color: var(--footer-text);
   margin: 0.5rem 0;
 }
 
 @media (max-width: 1024px) {
-  .contact-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
+  .contact-content { grid-template-columns: 1fr; gap: 3rem; }
 }
 
 @media (max-width: 768px) {
-  .contact {
-    padding: 4rem 1rem 2rem;
-  }
-
-  .contact-form-wrapper {
-    padding: 1.5rem;
-  }
-
-  .contact-card {
-    padding: 1rem;
-  }
-
-  .social-buttons {
-    flex-direction: column;
-  }
-
-  .social-button {
-    justify-content: center;
-  }
+  .contact { padding: 4rem 1rem 2rem; }
+  .contact-form-wrapper { padding: 1.5rem; }
+  .contact-card { padding: 1rem; }
+  .social-buttons { flex-direction: column; }
+  .social-button { justify-content: center; }
 }
